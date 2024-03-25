@@ -49,13 +49,14 @@ main > footer {
 main > form {
   box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.466);
   z-index: 1;
-  position: absolute;
+  top: 20vh;
+  position: fixed;
   align-self: center;
   justify-self: center;
   display: none;
   align-content: space-evenly;
   justify-content: center;
-  background-color: #ddd;
+  background-color: black;
   text-align: center;
   height: 30vh;
   width: 20vw;
@@ -94,4 +95,17 @@ nav button:hover {
   background-size: cover;
   grid-area: banner;
   background-image: url("https://images.unsplash.com/photo-1524578271613-d550eacf6090?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+form > button,
+form > input[type="submit"] {
+  background-color: blue;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+form > button:hover,
+form > input[type="submit"]:hover {
+  background-color: rgb(46, 46, 250);
 }
