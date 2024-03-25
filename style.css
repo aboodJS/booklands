@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 0;
+  display: grid;
+  height: 200vh;
+  width: 100vw;
+  grid-template-areas:
+    "nav nav nav nav nav nav"
+    "banner banner banner banner banner banner"
+    "content content content content content content"
+    "foot foot foot foot foot foot";
+  grid-template-rows: 5% 40% 70% 5%;
+  grid-auto-columns: 1fr;
+}
+
+main > nav {
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  column-span: all;
+  display: flex;
+  position: fixed;
+  top: 0;
+  grid-area: nav;
+  color: white;
+  background-color: black;
+}
+
+main > section {
+  grid-area: content;
+}
+
+main > footer {
+  grid-area: foot;
+}
+
+main > form {
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.466);
+  z-index: 1;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  display: none;
+  align-content: space-evenly;
+  justify-content: center;
+  background-color: #ddd;
+  text-align: center;
+  height: 30vh;
+  width: 20vw;
+}
+
+.visiable {
+  display: grid;
+}
+
+.hideBtn {
+  display: none;
+}
+
+.showBtn {
+  display: inline-block;
+}
+
+nav button {
+  background-color: white;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition-duration: 200ms;
+}
+
+nav button:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.banner {
+  background-size: cover;
+  grid-area: banner;
+  background-image: url("https://images.unsplash.com/photo-1524578271613-d550eacf6090?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}

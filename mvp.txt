@@ -1,0 +1,5 @@
+1- make the ui
+
+2- add a login page
+
+3- add a cart page 
