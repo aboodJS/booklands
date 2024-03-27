@@ -20,7 +20,7 @@ main {
     "banner banner banner banner banner banner"
     "content content content content content content"
     "foot foot foot foot foot foot";
-  grid-template-rows: 5% 40% 70% 5%;
+  grid-template-rows: 5% 30% 70% 10%;
   grid-auto-columns: 1fr;
 }
 
@@ -36,6 +36,7 @@ main > nav {
   grid-area: nav;
   color: white;
   background-color: black;
+  transition-duration: 250ms;
 }
 
 main > section {
@@ -108,4 +109,28 @@ form > input[type="submit"] {
 form > button:hover,
 form > input[type="submit"]:hover {
   background-color: rgb(46, 46, 250);
+}
+
+.banner {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.banner > * {
+  text-align: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.active {
+  color: crimson;
+  background-color: white;
 }

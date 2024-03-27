@@ -5,20 +5,31 @@ let userNameField = document.querySelector("#username");
 let passWordField = document.querySelector("#password");
 let loginForm = document.querySelector(".login_form");
 let signupForm = document.querySelector(".signup_form");
-let submitForm = document.querySelectorAll("form .submit");
+let submitSignUp = document.querySelector(".signup_form .submit");
+let submitLogin = document.querySelector(".login_form .submit");
 let closeForm = document.querySelectorAll("form .close");
+let navBar = document.querySelector("nav");
 
-if (localStorage.length == 0) {
+if (localStorage.length === 0) {
   localStorage.setItem("sign up", false);
 } else {
   localStorage.setItem("sign up", true);
 }
 
+window.onscroll = navStyle;
+
+function navStyle() {
+  if (window.scrollY > navBar.offsetHeight + 100) {
+    navBar.classList.add("active");
+  } else {
+    navBar.classList.remove("active");
+  }
+}
+
 let account = localStorage.getItem("sign up");
 
-logoutBtn.classList.add("hideBtn");
-
 if (account === "false") {
+  logoutBtn.classList.add("hideBtn");
   loginBtn.classList.add("hideBtn");
 } else {
   signupBtn.classList.add("hideBtn");
@@ -27,13 +38,6 @@ if (account === "false") {
 
 loginBtn.addEventListener("click", () => loginForm.classList.add("visiable"));
 
-submitForm.forEach((elem) => {
-  elem.addEventListener("click", () => {
-    localStorage.setItem("username", userNameField.value);
-    localStorage.setItem("password", passWordField.value);
-  });
-});
-
 closeForm.forEach((elem) => {
   elem.addEventListener("click", () => {
     elem.parentElement.classList.remove("visiable");
@@ -41,8 +45,8 @@ closeForm.forEach((elem) => {
 });
 
 logoutBtn.addEventListener("click", () => {
-  localStorage.clear();
   location.reload();
+  localStorage.clear();
 });
 
 signupBtn.addEventListener("click", () => {
