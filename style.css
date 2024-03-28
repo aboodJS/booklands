@@ -20,7 +20,7 @@ main {
     "banner banner banner banner banner banner"
     "content content content content content content"
     "foot foot foot foot foot foot";
-  grid-template-rows: 5% 30% 70% 10%;
+  grid-template-rows: 5% 35% 70% 10%;
   grid-auto-columns: 1fr;
 }
 
@@ -133,4 +133,27 @@ footer {
 .active {
   color: crimson;
   background-color: white;
+}
+
+.card {
+  border-radius: 10px;
+  height: 300px;
+  width: 25%;
+  background-size: cover;
+  margin-inline: 0.5rem;
+  transition-duration: 550ms;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clicked {
+  width: 35%;
+}
+
+.unclicked {
+  width: 50px;
 }

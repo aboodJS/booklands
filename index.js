@@ -9,6 +9,7 @@ let submitSignUp = document.querySelector(".signup_form .submit");
 let submitLogin = document.querySelector(".login_form .submit");
 let closeForm = document.querySelectorAll("form .close");
 let navBar = document.querySelector("nav");
+let cards = document.querySelectorAll("section .card");
 
 if (localStorage.length === 0) {
   localStorage.setItem("sign up", false);
@@ -51,4 +52,15 @@ logoutBtn.addEventListener("click", () => {
 
 signupBtn.addEventListener("click", () => {
   signupForm.classList.add("visiable");
+});
+
+cards.forEach(function (elem, i) {
+  elem.addEventListener("click", () => {
+    for (let i = 0; i < cards.length; i++) {
+      cards[i].classList.add("unclicked");
+      cards[i].classList.remove("clicked");
+    }
+    elem.classList.remove("unclicked");
+    elem.classList.add("clicked");
+  });
 });
