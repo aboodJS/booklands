@@ -81,40 +81,10 @@ main > form {
   display: inline-block;
 }
 
-nav button {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition-duration: 200ms;
-}
-
-nav button:hover {
-  background-color: var(--secondary-color);
-  color: white;
-}
-
 .banner {
   background-size: cover;
   grid-area: banner;
   background-image: url("https://images.unsplash.com/photo-1524578271613-d550eacf6090?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-}
-
-form > button,
-form > input[type="submit"] {
-  background-color: blue;
-  border: none;
-  border-radius: 4px;
-  color: var(--accent-color);
-}
-
-form > button:hover,
-form > input[type="submit"]:hover {
-  background-color: rgb(46, 46, 250);
 }
 
 .banner {
@@ -172,4 +142,20 @@ footer {
 
 section > * {
   text-align: center;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition-duration: 250ms;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+nav > ul {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
 }
