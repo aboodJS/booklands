@@ -150,7 +150,13 @@ footer {
   transition-duration: 550ms;
 }
 
-section {
+.section {
+  display: grid;
+  align-content: space-evenly;
+  justify-content: center;
+}
+
+.gallery {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,4 +168,8 @@ section {
 
 .unclicked {
   width: 50px;
+}
+
+section > * {
+  text-align: center;
 }
